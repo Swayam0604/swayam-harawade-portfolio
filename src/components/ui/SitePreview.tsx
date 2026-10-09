@@ -214,7 +214,15 @@ export function SitePreview({ project }: { project: Project }) {
         </button>
       ) : null}
 
-      {showingDeck && liveUrl ? (
+      {showingDeck && project.pdfPath ? (
+        <button
+          type="button"
+          onClick={() => setView("pdf")}
+          className="mt-2 text-sm underline underline-offset-4"
+        >
+          Back to case study
+        </button>
+      ) : showingDeck && liveUrl ? (
         <button
           type="button"
           onClick={() => setView("site")}

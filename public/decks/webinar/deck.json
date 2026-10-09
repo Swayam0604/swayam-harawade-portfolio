@@ -1,0 +1,11 @@
+{
+  "fileName": "Webinar Automation Portfolio Deck.pptx",
+  "slides": [
+    { "image": "/decks/webinar/slides/01.jpg" },
+    { "image": "/decks/webinar/slides/02.jpg" },
+    { "image": "/decks/webinar/slides/03.jpg" },
+    { "image": "/decks/webinar/slides/04.jpg" },
+    { "image": "/decks/webinar/slides/05.jpg" },
+    { "image": "/decks/webinar/slides/06.jpg" }
+  ]
+}
