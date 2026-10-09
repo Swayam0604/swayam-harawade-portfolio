@@ -97,6 +97,17 @@ export function SitePreview({ project }: { project: Project }) {
   const frame = (full: boolean) =>
     showingDeck && project.deckPath ? (
       <DeckViewer src={project.deckPath} full={full} />
+    ) : showingPdf && project.pdfPages?.length ? (
+      <div className={full ? "h-full w-full flex-1 overflow-y-auto bg-[#eceae4]" : "h-full w-full overflow-y-auto bg-[#eceae4]"}>
+        {project.pdfPages.map((src, index) => (
+          <img
+            key={src}
+            src={src}
+            alt={`${project.pdfFileName ?? project.title} page ${index + 1}`}
+            className="mx-auto block w-full max-w-3xl bg-white"
+          />
+        ))}
+      </div>
     ) : showingPdf && project.pdfPath ? (
       <iframe
         title={`${project.title} ${full ? "full document" : "document"}`}
@@ -238,6 +249,14 @@ export function SitePreview({ project }: { project: Project }) {
       ) : (
         <p className="mt-3 text-xs leading-relaxed text-muted">
           Case note only. Client, brand, and website are not shown.
+          {project.pdfPath ? (
+            <>
+              {" "}
+              <a href={project.pdfPath} target="_blank" rel="noreferrer" className="underline underline-offset-4">
+                Download PDF
+              </a>
+            </>
+          ) : null}
         </p>
       )}
 

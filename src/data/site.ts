@@ -52,6 +52,7 @@ export type Project = {
   deckFileName?: string;
   pdfPath?: string;
   pdfFileName?: string;
+  pdfPages?: string[];
   tone: "ink" | "stone";
   sections: CaseSection[];
 };
@@ -312,6 +313,7 @@ export const projects: Project[] = [
     previewLabel: "Webinar Automation Case Study.pdf",
     pdfPath: "/docs/webinar-automation-case-study.pdf",
     pdfFileName: "Webinar Automation Case Study.pdf",
+    pdfPages: ["/docs/webinar-case/01.jpg", "/docs/webinar-case/02.jpg"],
     deckPath: "/decks/webinar/deck.json",
     deckFileName: "Webinar Automation Portfolio Deck.pptx",
     tone: "stone",
