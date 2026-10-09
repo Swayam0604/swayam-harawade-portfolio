@@ -107,13 +107,17 @@ const marks: Record<string, () => ReactElement> = {
   ),
   WebinarJam: () => (
     <Icon>
-      <path fill="currentColor" d="M3 6h13v9H3V6Zm14 2 4-2v9l-4-2V8ZM5 17h9v2H5v-2Z" />
+      <rect x="2.5" y="5" width="14" height="11" rx="1.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <path fill="currentColor" d="m8.2 8.2 5 2.8-5 2.8V8.2Z" />
+      <path fill="currentColor" d="M17.2 8.2 21.5 6v9l-4.3-2.2V8.2Z" />
     </Icon>
   ),
   Brevo: () => (
     <Icon>
-      <circle cx="8" cy="12" r="5" fill="currentColor" />
-      <circle cx="16" cy="12" r="5" fill="currentColor" opacity=".7" />
+      <path
+        fill="currentColor"
+        d="M3.2 8.2c0-2.4 1.9-4.2 4.3-4.2 1.4 0 2.6.6 3.4 1.6.8-1 2-1.6 3.4-1.6 2.4 0 4.3 1.8 4.3 4.2 0 3.4-3.6 5.6-7.7 8.6-4.1-3-7.7-5.2-7.7-8.6Z"
+      />
     </Icon>
   ),
   Eventbrite: () => (

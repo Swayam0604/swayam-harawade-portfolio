@@ -89,10 +89,14 @@ function ProjectDetail() {
                 Live site
               </a>
             ) : null}
-            {project.deckFileName ? (
+            {project.pdfFileName ? (
+              <p className="mt-6 text-xs tracking-[0.18em] text-muted uppercase">Case note</p>
+            ) : project.deckFileName ? (
               <p className="mt-6 text-xs tracking-[0.18em] text-muted uppercase">Case study</p>
             ) : null}
-            {project.deckFileName ? (
+            {project.pdfFileName ? (
+              <p className="mt-2 text-sm">{project.pdfFileName}</p>
+            ) : project.deckFileName ? (
               <p className="mt-2 text-sm">{project.deckFileName}</p>
             ) : null}
           </aside>

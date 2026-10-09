@@ -6,7 +6,9 @@ import type { Project } from "@/data/site";
 
 export function SitePreview({ project }: { project: Project }) {
   const [open, setOpen] = useState(false);
-  const [view, setView] = useState<"site" | "deck">("site");
+  const [view, setView] = useState<"site" | "deck" | "pdf">(
+    project.pdfPath && !project.websiteUrl ? "pdf" : "site",
+  );
   const [showCta, setShowCta] = useState(false);
   const [docHtml, setDocHtml] = useState<string | null>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -15,9 +17,11 @@ export function SitePreview({ project }: { project: Project }) {
   const liveUrl = project.websiteUrl;
   const useSrcDoc = Boolean(project.proxyPath);
   const showingDeck = view === "deck" && Boolean(project.deckPath);
+  const showingPdf = view === "pdf" && Boolean(project.pdfPath);
+  const showingDoc = showingDeck || showingPdf;
 
   const scheduleCta = () => {
-    if (ctaTimer.current || showingDeck) return;
+    if (ctaTimer.current || showingDoc) return;
     ctaTimer.current = window.setTimeout(() => setShowCta(true), 7000);
   };
 
@@ -42,7 +46,7 @@ export function SitePreview({ project }: { project: Project }) {
 
   useEffect(() => {
     const iframe = iframeRef.current;
-    if (!iframe || showingDeck) return;
+    if (!iframe || showingDoc) return;
     const attached: Array<{ el: EventTarget; type: string; fn: EventListener }> = [];
 
     const bindScroller = (doc: Document) => {
@@ -75,7 +79,7 @@ export function SitePreview({ project }: { project: Project }) {
       iframe.removeEventListener("load", onLoad);
       for (const { el, type, fn } of attached) el.removeEventListener(type, fn);
     };
-  }, [docHtml, showingDeck]);
+  }, [docHtml, showingDoc]);
 
   useEffect(() => {
     if (!open) return;
@@ -93,6 +97,12 @@ export function SitePreview({ project }: { project: Project }) {
   const frame = (full: boolean) =>
     showingDeck && project.deckPath ? (
       <DeckViewer src={project.deckPath} full={full} />
+    ) : showingPdf && project.pdfPath ? (
+      <iframe
+        title={`${project.title} ${full ? "full document" : "document"}`}
+        src={project.pdfPath}
+        className={full ? "h-full w-full flex-1 border-0 bg-bg" : "h-full w-full border-0 bg-bg"}
+      />
     ) : useSrcDoc && docHtml ? (
       <iframe
         ref={full ? undefined : iframeRef}
@@ -123,7 +133,11 @@ export function SitePreview({ project }: { project: Project }) {
           <span className="size-2 rounded-full bg-stone/50" />
           <span className="size-2 rounded-full bg-stone/50" />
           <span className="ml-2 flex-1 truncate bg-fg/40 px-3 py-1 text-center text-[11px] tracking-wide text-stone">
-            {showingDeck ? project.deckFileName : project.previewLabel}
+            {showingDeck
+              ? project.deckFileName
+              : showingPdf
+                ? project.pdfFileName
+                : project.previewLabel}
           </span>
           <button
             type="button"
@@ -142,11 +156,11 @@ export function SitePreview({ project }: { project: Project }) {
               : "relative h-[28rem] overflow-hidden bg-bg sm:h-[36rem] lg:h-[44rem]"
           }
           onMouseEnter={() => {
-            if (!useSrcDoc && !showingDeck) scheduleCta();
+            if (!useSrcDoc && !showingDoc) scheduleCta();
           }}
         >
           {frame(false)}
-          {showCta && !showingDeck ? (
+          {showCta && !showingDoc && liveUrl ? (
             <div className="absolute inset-0 z-10 flex items-center justify-center bg-fg/50">
               <button
                 type="button"
@@ -180,7 +194,27 @@ export function SitePreview({ project }: { project: Project }) {
         </button>
       ) : null}
 
-      {showingDeck ? (
+      {project.pdfPath && project.pdfFileName ? (
+        <button
+          type="button"
+          onClick={() => {
+            setView("pdf");
+            setShowCta(false);
+            window.requestAnimationFrame(() => {
+              chromeRef.current?.scrollIntoView({ block: "center", behavior: "smooth" });
+            });
+          }}
+          className="mt-3 flex min-h-12 w-full items-center gap-3 border border-line bg-bg px-4 text-left hover:bg-stone"
+        >
+          <FileText className="size-[1em] shrink-0" />
+          <span className="flex-1 truncate text-sm">{project.pdfFileName}</span>
+          <span className="text-[11px] tracking-[0.16em] text-muted uppercase">
+            {showingPdf ? "Showing" : "Open"}
+          </span>
+        </button>
+      ) : null}
+
+      {showingDeck && liveUrl ? (
         <button
           type="button"
           onClick={() => setView("site")}
@@ -188,10 +222,14 @@ export function SitePreview({ project }: { project: Project }) {
         >
           Back to website
         </button>
-      ) : (
+      ) : liveUrl ? (
         <p className="mt-3 text-xs leading-relaxed text-muted">
           Preview is view-only. Cart, checkout, and payments stay on the real site — use Open website
           / Open in new tab if you need to interact.
+        </p>
+      ) : (
+        <p className="mt-3 text-xs leading-relaxed text-muted">
+          Case note only. Client, brand, and website are not shown.
         </p>
       )}
 
@@ -199,9 +237,9 @@ export function SitePreview({ project }: { project: Project }) {
         <div className="fixed inset-0 z-[60] flex h-dvh w-full flex-col bg-[#111]">
           <div className="flex shrink-0 items-center gap-3 border-b border-white/10 px-4 py-3 text-stone">
             <p className="flex-1 truncate font-serif text-lg text-bg">
-              {showingDeck ? project.deckFileName : project.title}
+              {showingDeck ? project.deckFileName : showingPdf ? project.pdfFileName : project.title}
             </p>
-            {liveUrl && !showingDeck ? (
+            {liveUrl && !showingDoc ? (
               <a
                 href={liveUrl}
                 target="_blank"

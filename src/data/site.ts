@@ -43,13 +43,15 @@ export type Project = {
   stack: string[];
   github?: string;
   websiteUrl?: string;
-  previewPath: string;
+  previewPath?: string;
   previewLabel: string;
   previewImage?: string;
   proxyPath?: string;
   embeddable?: boolean;
   deckPath?: string;
   deckFileName?: string;
+  pdfPath?: string;
+  pdfFileName?: string;
   tone: "ink" | "stone";
   sections: CaseSection[];
 };
@@ -65,6 +67,29 @@ export const experience = [
       "Managed DNS, domain configuration, and website updates across multiple client projects.",
       "Worked across Shopify, Kajabi, GoHighLevel, and Ivorey, supporting ecommerce websites through product updates, content management, landing page improvements, integrations, and marketing automation.",
       "Assisted with platform migrations including Groove to GoHighLevel and performed website audits to improve structure, usability, and client implementation.",
+      "Delivered webinar systems and automation as freelance technical support — WebinarJam, Brevo, and WordPress landing and replay pages.",
+    ],
+  },
+  {
+    title: "Webinar Systems & Automation",
+    org: "Freelance Support",
+    period: "Sep 2026",
+    bullets: [
+      "Set up WebinarJam for registration, the live session, and attendance capture.",
+      "Built Brevo email automation: confirmation, pre-session reminders, and post-session replay follow-up.",
+      "Created a registration landing page in WordPress and added it as a separate page on the existing site.",
+      "Built a post-webinar replay page and the CRM workflow from registration through attended / no-show split.",
+    ],
+  },
+  {
+    title: "Shopify Developer — The Satvic Origin",
+    org: "Freelance Project",
+    period: "Aug 2026 — Sep 2026",
+    bullets: [
+      "Built the launch-ready Shopify storefront end-to-end — theme customization, products, collections, and content pages.",
+      "Set up merchandising for six fragrances, including variants, SKUs, pricing, inventory, and metafields.",
+      "Configured Razorpay checkout, shipping rules, and Judge.me reviews on the live store.",
+      "Prepared operations for launch: store policies, customer accounts, and Drivaa logistics setup.",
     ],
   },
   {
@@ -263,6 +288,49 @@ export const projects: Project[] = [
       {
         heading: "Community gatherings",
         body: "A dedicated events section highlights upcoming gatherings at each branch, with location, date, and short descriptions.",
+      },
+    ],
+  },
+  {
+    slug: "webinar-systems",
+    title: "Webinar Systems & Automation",
+    kind: "Freelance Support",
+    year: "2026",
+    period: "Sep 2026",
+    summary:
+      "WebinarJam, Brevo, and WordPress landing and replay pages for a live campaign — technical delivery only, client unnamed.",
+    description:
+      "Freelance technical support for a live webinar campaign. I performed the platform setup, the WordPress pages, and the email automation. Campaign copy, social, video, and ads were done by other team members. Client, brand, and event names are omitted.",
+    features: [
+      "WebinarJam setup: registration, live session, attendance capture",
+      "Brevo email setup and automation around the live date",
+      "WordPress registration landing page added to the existing site",
+      "Post-webinar replay page",
+      "CRM workflow: registered tag, reminders, attended / no-show split, replay follow-up",
+    ],
+    stack: ["WebinarJam", "Brevo", "WordPress"],
+    previewLabel: "Webinar systems — case note.pdf",
+    pdfPath: "/docs/webinar-systems.pdf",
+    pdfFileName: "Webinar systems — case note.pdf",
+    tone: "stone",
+    sections: [
+      {
+        heading: "Project overview",
+        body: "A live webinar needed a working registration path, a session platform, and follow-up mail. I built those systems as freelance technical support. The hiring partner kept the client relationship; this case does not name the brand, speakers, or event.",
+      },
+      {
+        heading: "Tasks I performed",
+        items: [
+          "Full WebinarJam setup for registration, the live session, and attendance",
+          "Brevo confirmation, reminder, and replay sequences",
+          "A bilingual-ready registration page on the existing WordPress site",
+          "A replay page published after the live session",
+          "Automation from form submit through attended / no-show split",
+        ],
+      },
+      {
+        heading: "Not part of my task",
+        body: "Campaign copy, social posts, video, ads, and commercial offer wording were done by other team members. Those assets are not shown here.",
       },
     ],
   },

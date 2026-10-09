@@ -11,7 +11,7 @@ function ProjectsPage() {
       <PageIntro
         kicker="Work"
         title="Projects"
-        body="Shopify storefronts, café product thinking, and full stack membership systems."
+        body="Shopify storefronts, webinar systems, café product thinking, and full stack membership platforms."
       />
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-12">
