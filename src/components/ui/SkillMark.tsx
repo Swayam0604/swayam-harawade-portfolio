@@ -200,6 +200,12 @@ const generic: Record<string, () => ReactElement> = {
       <path fill="none" stroke="currentColor" strokeWidth="1.6" d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9c-3-3-4-6-4-9s1-6 4-9Z" />
     </Icon>
   ),
+  "Domain connection": () => (
+    <Icon>
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <path fill="none" stroke="currentColor" strokeWidth="1.6" d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9c-3-3-4-6-4-9s1-6 4-9Z" />
+    </Icon>
+  ),
   "Domain configuration": () => (
     <Icon>
       <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.6" />

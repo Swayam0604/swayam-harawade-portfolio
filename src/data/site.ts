@@ -69,7 +69,7 @@ export const experience = [
       "Worked across Shopify, Kajabi, GoHighLevel, and Ivorey, supporting ecommerce websites through product updates, content management, landing page improvements, integrations, and marketing automation.",
       "Assisted with platform migrations including Groove to GoHighLevel and performed website audits to improve structure, usability, and client implementation.",
       "Delivered webinar systems and automation as freelance technical support — WebinarJam, Brevo, and WordPress landing and replay pages.",
-      "Building an assessment funnel on GoHighLevel after a move from Ivorey: landing page, quiz, results page, and conditional email workflow, through testing and handover.",
+      "Building an assessment funnel on GoHighLevel after a move from Ivorey, including the domain connection: landing page, quiz, results page, and conditional email workflow, through testing and handover.",
     ],
   },
   {
@@ -88,7 +88,7 @@ export const experience = [
     org: "Freelance Support",
     period: "2026 — In progress",
     bullets: [
-      "Moved the build from Ivorey onto GoHighLevel.",
+      "Moved the build from Ivorey onto GoHighLevel, including the domain connection and DNS records.",
       "Built a single-page landing page with a link into an assessment quiz.",
       "Set up the in-platform results page that follows the quiz.",
       "Built a workflow that shows email content blocks from score bands and individual answers, including audience-specific versions.",
@@ -369,9 +369,9 @@ export const projects: Project[] = [
     summary:
       "Quiz, results page, and conditional email logic in GoHighLevel. Freelance support for the hiring partner — not a direct client.",
     description:
-      "Freelance technical support on a team. The end client is the hiring partner's, not mine. I built a single landing page, an assessment quiz, a native results page, and a workflow that assembles each follow-up email from conditional blocks. Final email testing is still underway, then handover to that partner.",
+      "Freelance technical support on a team. The end client is the hiring partner's, not mine. I connected the domain from Ivorey to GoHighLevel, then built a single landing page, an assessment quiz, a native results page, and a workflow that assembles each follow-up email from conditional blocks. Final email testing is still underway, then handover to that partner.",
     features: [
-      "Platform move from Ivorey to GoHighLevel",
+      "Platform move from Ivorey to GoHighLevel, including domain connection and DNS records",
       "Single-page landing page with a quiz entry point",
       "Assessment quiz and an in-platform results page",
       "Workflow with conditional email blocks from overall score and individual answers",
@@ -394,6 +394,7 @@ export const projects: Project[] = [
       {
         heading: "Tasks I performed",
         items: [
+          "Connected the domain from Ivorey to GoHighLevel and set the DNS records",
           "Moved the working build from Ivorey onto GoHighLevel",
           "Built the single-page landing page and linked it to the assessment",
           "Set up the quiz and the results page inside the same platform",
@@ -492,6 +493,7 @@ export const skills = {
     title: "Technical & Integration",
     items: [
       "DNS handling",
+      "Domain connection",
       "Domain configuration",
       "Basic HTML email coding",
       "API integration",
