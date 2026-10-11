@@ -84,7 +84,7 @@ export const experience = [
     ],
   },
   {
-    title: "Assessment Funnel & Conditional Emails",
+    title: "Assessment Quiz & Personalised Email Automation",
     org: "Freelance Support",
     period: "2026 — In progress",
     bullets: [
@@ -362,14 +362,14 @@ export const projects: Project[] = [
   },
   {
     slug: "assessment-funnel",
-    title: "Assessment Funnel & Conditional Emails",
+    title: "Assessment Quiz & Personalised Email Automation",
     kind: "Freelance Support",
     year: "2026",
-    period: "In progress",
+    period: "Final testing",
     summary:
-      "A single-page landing page, assessment quiz, results page, and conditional email workflow — moved from Ivorey to GoHighLevel. Client unnamed.",
+      "Quiz, results page, and conditional email logic in GoHighLevel. Freelance support for the hiring partner — not a direct client.",
     description:
-      "Freelance technical support for a live assessment funnel. The build started on Ivorey and moved to GoHighLevel. I set up the landing page, the quiz, the results page, and the email workflow that changes which blocks a person sees. Email build and testing are the last step before handover. Client, brand, and personal details are not shown.",
+      "Freelance technical support on a team. The end client is the hiring partner's, not mine. I built a single landing page, an assessment quiz, a native results page, and a workflow that assembles each follow-up email from conditional blocks. Final email testing is still underway, then handover to that partner.",
     features: [
       "Platform move from Ivorey to GoHighLevel",
       "Single-page landing page with a quiz entry point",
@@ -379,15 +379,17 @@ export const projects: Project[] = [
       "Email build and end-to-end testing still in progress, then handover",
     ],
     stack: ["GoHighLevel", "Ivorey"],
-    previewLabel: "Assessment funnel — case note.pdf",
-    pdfPath: "/docs/assessment-funnel-case-note.pdf",
-    pdfFileName: "Assessment funnel — case note.pdf",
-    pdfPages: ["/docs/assessment-funnel/01.jpg"],
+    previewLabel: "Assessment Automation Case Study.pdf",
+    pdfPath: "/docs/assessment-automation-case-study.pdf",
+    pdfFileName: "Assessment Automation Case Study.pdf",
+    pdfPages: ["/docs/assessment-funnel/01.jpg", "/docs/assessment-funnel/02.jpg"],
+    deckPath: "/decks/assessment/deck.json",
+    deckFileName: "Assessment Automation Portfolio Deck.pptx",
     tone: "ink",
     sections: [
       {
         heading: "Overview",
-        body: "One funnel: a landing page, an assessment, a results page, and a follow-up email that is different for each person. The hiring partner keeps the client relationship. This note does not name the brand or show the live page.",
+        body: "One funnel inside GoHighLevel: a landing page, an assessment, a results page, and a follow-up email assembled from conditional blocks. This is freelance support. The end client belongs to the hiring partner, not to me. Brand and personal details are not shown.",
       },
       {
         heading: "Tasks I performed",
