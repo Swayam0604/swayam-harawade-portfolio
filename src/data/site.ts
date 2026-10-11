@@ -69,6 +69,7 @@ export const experience = [
       "Worked across Shopify, Kajabi, GoHighLevel, and Ivorey, supporting ecommerce websites through product updates, content management, landing page improvements, integrations, and marketing automation.",
       "Assisted with platform migrations including Groove to GoHighLevel and performed website audits to improve structure, usability, and client implementation.",
       "Delivered webinar systems and automation as freelance technical support — WebinarJam, Brevo, and WordPress landing and replay pages.",
+      "Building an assessment funnel on GoHighLevel after a move from Ivorey: landing page, quiz, results page, and conditional email workflow, through testing and handover.",
     ],
   },
   {
@@ -80,6 +81,18 @@ export const experience = [
       "Built Brevo email automation: confirmation, pre-session reminders, and post-session replay follow-up.",
       "Created a registration landing page in WordPress and added it as a separate page on the existing site.",
       "Built a post-webinar replay page and the CRM workflow from registration through attended / no-show split.",
+    ],
+  },
+  {
+    title: "Assessment Funnel & Conditional Emails",
+    org: "Freelance Support",
+    period: "2026 — In progress",
+    bullets: [
+      "Moved the build from Ivorey onto GoHighLevel.",
+      "Built a single-page landing page with a link into an assessment quiz.",
+      "Set up the in-platform results page that follows the quiz.",
+      "Built a workflow that shows email content blocks from score bands and individual answers, including audience-specific versions.",
+      "Currently finishing the email build and testing before handover.",
     ],
   },
   {
@@ -344,6 +357,55 @@ export const projects: Project[] = [
       {
         heading: "Outcome",
         body: "Sign-up, reminders, attendance tracking, and replay follow-up run as one flow. The right message reaches each contact at the right time. Strategy, copy, and creative assets were produced by the wider team and are not shown.",
+      },
+    ],
+  },
+  {
+    slug: "assessment-funnel",
+    title: "Assessment Funnel & Conditional Emails",
+    kind: "Freelance Support",
+    year: "2026",
+    period: "In progress",
+    summary:
+      "A single-page landing page, assessment quiz, results page, and conditional email workflow — moved from Ivorey to GoHighLevel. Client unnamed.",
+    description:
+      "Freelance technical support for a live assessment funnel. The build started on Ivorey and moved to GoHighLevel. I set up the landing page, the quiz, the results page, and the email workflow that changes which blocks a person sees. Email build and testing are the last step before handover. Client, brand, and personal details are not shown.",
+    features: [
+      "Platform move from Ivorey to GoHighLevel",
+      "Single-page landing page with a quiz entry point",
+      "Assessment quiz and an in-platform results page",
+      "Workflow with conditional email blocks from overall score and individual answers",
+      "Audience-specific versions of the same block, routed by one answer",
+      "Email build and end-to-end testing still in progress, then handover",
+    ],
+    stack: ["GoHighLevel", "Ivorey"],
+    previewLabel: "Assessment funnel — case note.pdf",
+    pdfPath: "/docs/assessment-funnel-case-note.pdf",
+    pdfFileName: "Assessment funnel — case note.pdf",
+    pdfPages: ["/docs/assessment-funnel/01.jpg"],
+    tone: "ink",
+    sections: [
+      {
+        heading: "Overview",
+        body: "One funnel: a landing page, an assessment, a results page, and a follow-up email that is different for each person. The hiring partner keeps the client relationship. This note does not name the brand or show the live page.",
+      },
+      {
+        heading: "Tasks I performed",
+        items: [
+          "Moved the working build from Ivorey onto GoHighLevel",
+          "Built the single-page landing page and linked it to the assessment",
+          "Set up the quiz and the results page inside the same platform",
+          "Built the automation so email sections appear or stay hidden from score bands and specific answers",
+          "Nested a second condition so each block can use the matching audience version",
+        ],
+      },
+      {
+        heading: "Where it stands",
+        body: "Most of the system is in place. The remaining work is the email content and a full test that each path sends the right blocks, then handover to the hiring partner.",
+      },
+      {
+        heading: "Not included",
+        body: "No client name, no personal details, no screenshots of the live page, and no email copy. Those stay with the hiring partner.",
       },
     ],
   },
