@@ -69,7 +69,7 @@ export const experience = [
       "Worked across Shopify, Kajabi, GoHighLevel, and Ivorey, supporting ecommerce websites through product updates, content management, landing page improvements, integrations, and marketing automation.",
       "Assisted with platform migrations including Groove to GoHighLevel and performed website audits to improve structure, usability, and client implementation.",
       "Delivered webinar systems and automation as freelance technical support — WebinarJam, Brevo, and WordPress landing and replay pages.",
-      "Building an assessment funnel on GoHighLevel after a move from Ivorey, including the domain connection: landing page, quiz, results page, and conditional email workflow, through testing and handover.",
+      "Launched an assessment funnel on GoHighLevel after a move from Ivorey, including the domain connection: landing page, quiz, results page, and conditional email workflow, tested and live.",
     ],
   },
   {
@@ -86,13 +86,13 @@ export const experience = [
   {
     title: "Assessment Quiz & Personalised Email Automation",
     org: "Freelance Support",
-    period: "2026 — In progress",
+    period: "2026 — Launched",
     bullets: [
       "Moved the build from Ivorey onto GoHighLevel, including the domain connection and DNS records.",
       "Built a single-page landing page with a link into an assessment quiz.",
       "Set up the in-platform results page that follows the quiz.",
       "Built a workflow that shows email content blocks from score bands and individual answers, including audience-specific versions.",
-      "Currently finishing the email build and testing before handover.",
+      "Finished the email build, completed end-to-end testing, and launched it live.",
     ],
   },
   {
@@ -326,7 +326,7 @@ export const projects: Project[] = [
     previewLabel: "Webinar Automation Case Study.pdf",
     pdfPath: "/docs/webinar-automation-case-study.pdf",
     pdfFileName: "Webinar Automation Case Study.pdf",
-    pdfPages: ["/docs/webinar-case/01.jpg", "/docs/webinar-case/02.jpg"],
+    pdfPages: ["/docs/webinar-case/01.jpg", "/docs/webinar-case/02.jpg", "/docs/webinar-case/03.jpg"],
     deckPath: "/decks/webinar/deck.json",
     deckFileName: "Webinar Automation Portfolio Deck.pptx",
     tone: "stone",
@@ -365,24 +365,24 @@ export const projects: Project[] = [
     title: "Assessment Quiz & Personalised Email Automation",
     kind: "Freelance Support",
     year: "2026",
-    period: "Final testing",
+    period: "Launched",
     summary:
-      "Quiz, results page, and conditional email logic in GoHighLevel. Freelance support for the hiring partner — not a direct client.",
+      "Quiz, results page, and conditional email logic in GoHighLevel. Built, tested, and launched as freelance support — not a direct client.",
     description:
-      "Freelance technical support on a team. The end client is the hiring partner's, not mine. I connected the domain from Ivorey to GoHighLevel, then built a single landing page, an assessment quiz, a native results page, and a workflow that assembles each follow-up email from conditional blocks. Final email testing is still underway, then handover to that partner.",
+      "Freelance technical support on a team. The end client is the hiring partner's, not mine. I connected the domain from Ivorey to GoHighLevel, then built a single landing page, an assessment quiz, a native results page, and a workflow that assembles each follow-up email from conditional blocks. The email build and end-to-end testing are done, and the funnel is live.",
     features: [
       "Platform move from Ivorey to GoHighLevel, including domain connection and DNS records",
       "Single-page landing page with a quiz entry point",
       "Assessment quiz and an in-platform results page",
       "Workflow with conditional email blocks from overall score and individual answers",
       "Audience-specific versions of the same block, routed by one answer",
-      "Email build and end-to-end testing still in progress, then handover",
+      "Email build and end-to-end testing completed, then launched",
     ],
     stack: ["GoHighLevel", "Ivorey"],
     previewLabel: "Assessment Automation Case Study.pdf",
     pdfPath: "/docs/assessment-automation-case-study.pdf",
     pdfFileName: "Assessment Automation Case Study.pdf",
-    pdfPages: ["/docs/assessment-funnel/01.jpg", "/docs/assessment-funnel/02.jpg"],
+    pdfPages: ["/docs/assessment-funnel/01.jpg", "/docs/assessment-funnel/02.jpg", "/docs/assessment-funnel/03.jpg"],
     deckPath: "/decks/assessment/deck.json",
     deckFileName: "Assessment Automation Portfolio Deck.pptx",
     tone: "ink",
@@ -404,7 +404,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Where it stands",
-        body: "Most of the system is in place. The remaining work is the email content and a full test that each path sends the right blocks, then handover to the hiring partner.",
+        body: "Built, tested, and launched. Each respondent gets a results page and a personalised email from one workflow. This remains freelance support for the hiring partner, not a direct client.",
       },
       {
         heading: "Not included",
