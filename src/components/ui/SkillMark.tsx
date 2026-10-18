@@ -194,6 +194,17 @@ const generic: Record<string, () => ReactElement> = {
       <path fill="none" stroke="currentColor" strokeWidth="1.6" d="m14.5 14.5 5 5" />
     </Icon>
   ),
+  GA4: () => (
+    <Icon>
+      <path fill="none" stroke="currentColor" strokeWidth="1.6" d="M5 18V10M12 18V6M19 18v-4" />
+    </Icon>
+  ),
+  "On-page SEO": () => (
+    <Icon>
+      <circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <path fill="none" stroke="currentColor" strokeWidth="1.6" d="m14.5 14.5 5 5" />
+    </Icon>
+  ),
   "DNS handling": () => (
     <Icon>
       <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.6" />
@@ -204,6 +215,17 @@ const generic: Record<string, () => ReactElement> = {
     <Icon>
       <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.6" />
       <path fill="none" stroke="currentColor" strokeWidth="1.6" d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9c-3-3-4-6-4-9s1-6 4-9Z" />
+    </Icon>
+  ),
+  Cloudflare: () => (
+    <Icon>
+      <path fill="none" stroke="currentColor" strokeWidth="1.6" d="M7 16h11a3.5 3.5 0 0 0 .4-7 5 5 0 0 0-9.6-1.2A3.5 3.5 0 0 0 7 16Z" />
+    </Icon>
+  ),
+  "Affiliate links": () => (
+    <Icon>
+      <path fill="none" stroke="currentColor" strokeWidth="1.6" d="M9 12a4 4 0 0 1 0-5.7l1.4-1.4a4 4 0 0 1 5.7 5.7L15 12" />
+      <path fill="none" stroke="currentColor" strokeWidth="1.6" d="M15 12a4 4 0 0 1 0 5.7l-1.4 1.4a4 4 0 0 1-5.7-5.7L9 12" />
     </Icon>
   ),
   "Domain configuration": () => (

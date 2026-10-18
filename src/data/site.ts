@@ -67,7 +67,7 @@ export const experience = [
       "Segmented customer audiences and built automated email workflows based on customer lifecycle.",
       "Managed DNS, domain configuration, and website updates across multiple client projects.",
       "Worked across Shopify, Kajabi, GoHighLevel, and Ivorey, supporting ecommerce websites through product updates, content management, landing page improvements, integrations, and marketing automation.",
-      "Assisted with platform migrations including Groove to GoHighLevel and performed website audits to improve structure, usability, and client implementation.",
+      "Launched a Groove to GoHighLevel site migration as freelance support: pages, two blogs, Cloudflare DNS, on-page SEO, and GA4.",
       "Delivered webinar systems and automation as freelance technical support — WebinarJam, Brevo, and WordPress landing and replay pages.",
       "Launched an assessment funnel on GoHighLevel after a move from Ivorey, including the domain connection: landing page, quiz, results page, and conditional email workflow, tested and live.",
     ],
@@ -93,6 +93,18 @@ export const experience = [
       "Set up the in-platform results page that follows the quiz.",
       "Built a workflow that shows email content blocks from score bands and individual answers, including audience-specific versions.",
       "Finished the email build, completed end-to-end testing, and launched it live.",
+    ],
+  },
+  {
+    title: "Website Migration, Rebrand & Blog Launch",
+    org: "Freelance Support",
+    period: "May 2026 — Oct 2026",
+    bullets: [
+      "Migrated an affiliate site from Groove to GoHighLevel: core pages, 39 live posts across 7 categories, and about 10 contacts.",
+      "Rebranded the site and launched a second blog with 44 posts. Affiliate links were added on both blogs.",
+      "Connected the main domain and both blog domains in Cloudflare after a stretch of domain issues.",
+      "Set on-page SEO, GA4, redirects, and a responsive layout, then took the site live.",
+      "Worked a few hours a week between other projects. The end client belongs to the hiring partner, not to me.",
     ],
   },
   {
@@ -139,7 +151,7 @@ export const services = [
   {
     number: "04",
     title: "Platform Migrations",
-    body: "Ivory to Kajabi, Groove to GoHighLevel — pages, automations, forms, domain transition, and DNS handled as a complete move.",
+    body: "Ivory to Kajabi, Groove to GoHighLevel — pages, blogs, Cloudflare DNS, redirects, and a full rebrand handled as one move.",
   },
   {
     number: "05",
@@ -413,6 +425,64 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "website-migration",
+    title: "Website Migration, Rebrand & Blog Launch",
+    kind: "Freelance Support",
+    year: "2026",
+    period: "May — Oct 2026",
+    summary:
+      "A Groove affiliate site moved to GoHighLevel, rebranded, and launched with two blogs. Freelance support — not a direct client.",
+    description:
+      "Freelance technical support on a team. The end client is the hiring partner's, not mine. I moved the site off Groove, rebuilt the core pages, migrated the live blog, launched a second blog, connected the domains in Cloudflare, and took it live. Domain issues and other projects stretched the work from May to October, at a few hours a week.",
+    features: [
+      "Core pages rebuilt in GoHighLevel, with six outdated pages left behind on purpose",
+      "39 live blog posts across 7 categories, with affiliate links added again",
+      "Full rebrand, responsive on mobile and desktop",
+      "A second blog launched with 44 posts, each with affiliate links",
+      "Main site and both blog domains connected through Cloudflare DNS",
+      "On-page SEO, GA4, redirect checks, and about 10 contacts imported",
+    ],
+    stack: ["GoHighLevel", "Cloudflare", "GA4"],
+    previewLabel: "Website Migration Case Study.pdf",
+    pdfPath: "/docs/website-migration-case-study.pdf",
+    pdfFileName: "Website Migration Case Study.pdf",
+    pdfPages: [
+      "/docs/website-migration/01.jpg",
+      "/docs/website-migration/02.jpg",
+      "/docs/website-migration/03.jpg",
+    ],
+    deckPath: "/decks/migration/deck.json",
+    deckFileName: "Website Migration Portfolio Deck.pptx",
+    tone: "ink",
+    sections: [
+      {
+        heading: "Overview",
+        body: "An older Groove site with a small set of pages and one blog became a rebranded GoHighLevel site with two blogs. This is freelance support. The end client belongs to the hiring partner, not to me. The site name, brand, and product research are not shown.",
+      },
+      {
+        heading: "Tasks I performed",
+        items: [
+          "Audited the legacy site and mapped what should move",
+          "Rebuilt the core pages and migrated 39 live posts across 7 categories",
+          "Added affiliate links back onto the migrated posts",
+          "Rebranded the site and launched a second blog with 44 posts",
+          "Added DNS records in Cloudflare for the main domain and both blog domains",
+          "Checked redirects on pages, buttons, and navigation",
+          "Wrote SEO titles and descriptions, installed GA4, and tested mobile and desktop",
+          "Imported the small existing contact list into the CRM",
+        ],
+      },
+      {
+        heading: "Timeline",
+        body: "Started in May 2026 and finished in October 2026. Domain issues, plus other projects in between, kept it to a few hours a week.",
+      },
+      {
+        heading: "Not included",
+        body: "No website name, no client name, no screenshots of the live site, and no product research or affiliate product lists. Those stay with the hiring partner.",
+      },
+    ],
+  },
+  {
     slug: "perqclub",
     title: "PerQClub",
     kind: "Full Stack",
@@ -485,6 +555,8 @@ export const skills = {
     title: "Analytics & Tracking",
     items: [
       "Campaign testing & QA",
+      "GA4",
+      "On-page SEO",
       "Basic performance review",
       "SEO audit review (foundational)",
     ],
@@ -494,7 +566,8 @@ export const skills = {
     items: [
       "DNS handling",
       "Domain connection",
-      "Domain configuration",
+      "Cloudflare",
+      "Affiliate links",
       "Basic HTML email coding",
       "API integration",
       "Razorpay",
